@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # --- Path to SimpleAmqpClient & rabbitmq-c ---
 set(SIMPLE_AMQP_CLIENT_INCLUDE "C:/work/projects/cppprojects/SimpleAmqpClient/src")
 set(SIMPLE_AMQP_CLIENT_LIB "C:/work/projects/cppprojects/SimpleAmqpClient/build/Debug/SimpleAmqpClient.7.lib")
-set(RABBITMQC_LIB "C:/work/projects/cppprojects/rabbitmq-c/librabbitmq/Debug/rabbitmq.4.dll")
+set(SIMPLE_AMQP_CLIENT_DLL "C:/work/projects/cppprojects/SimpleAmqpClient/build/Debug/SimpleAmqpClient.7.dll")
+set(RABBITMQC_DLL "C:/work/projects/cppprojects/rabbitmq-c/librabbitmq/Debug/rabbitmq.4.dll")
 
 # --- Boost paths ---
 # CMake’s built-in FindBoost.cmake module does not automatically search C:/local or other custom install paths on Windows.
