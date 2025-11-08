@@ -11,12 +11,9 @@ target_link_libraries(sender PRIVATE ${SIMPLE_AMQP_CLIENT_LIB})
 # Copy DLLs automatically to output directory after build
 add_custom_command(TARGET sender POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "C:/work/projects/cppprojects/SimpleAmqpClient/build/Debug/SimpleAmqpClient.7.dll"
-        $<TARGET_FILE_DIR:sender>
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "C:/work/projects/cppprojects/rabbitmq-c/librabbitmq/Debug/rabbitmq.4.dll"
+        ${RABBITMQC_LIB}
         $<TARGET_FILE_DIR:sender>
     COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "C:/local/boost_1_89_0/stage/lib"
+        ${BOOST_LIBRARYDIR}
         $<TARGET_FILE_DIR:sender>
 )

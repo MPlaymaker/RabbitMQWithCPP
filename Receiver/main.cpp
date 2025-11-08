@@ -26,14 +26,12 @@ int main()
             {
                 std::string body = envelope->Message()->Body();
                 std::cout << "Received: " << body << std::endl;
+
+                // ✅ Explicit manual acknowledgment
+                channel->BasicAck(envelope);
             }
             else
-            {
                 std::cout << "No message available" << std::endl;
-            }
-
-            // ✅ Explicit manual acknowledgment
-            channel->BasicAck(envelope);
             
             std::this_thread::sleep_for(std::chrono::seconds(1));
         }
